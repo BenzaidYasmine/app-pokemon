@@ -1,8 +1,15 @@
 <h1>{{title}}</h1>
 
-<div *ngIf="jsonData">
-  <!-- Utilisez vos données ici -->
-  {{ jsonData[0].name | json }} <br/>
-  <img [src]="jsonData[0].images.small" alt="{{ jsonData.name }}">
-</div>
+<!-- <div *ngIf="pokemonsList">
+  {{ jsonData[0].name | json }} <br />
+</div> -->
 
+
+<p>La liste des pokemons:</p>
+<div *ngFor="let pokemon of pokemonsList">
+  <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
+  <p *ngIf="selectedPokemon === pokemon">
+    <label>Le nom : </label>
+    {{pokemon.name}}
+  </p>
+</div>
