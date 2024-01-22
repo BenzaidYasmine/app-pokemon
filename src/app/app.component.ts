@@ -29,12 +29,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-
- 
   selectedPokemon: any;
   selectPokemon(pokemon: any) {
-    // Mettez à jour la variable selectedPokemon lorsqu'un Pokémon est sélectionné
     this.selectedPokemon = pokemon;
-    console.log('le pokemon séléctionné est : ', this.selectedPokemon)
   }
 }

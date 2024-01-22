@@ -1,15 +1,31 @@
-<h1>{{title}}</h1>
-
 <!-- <div *ngIf="pokemonsList">
   {{ jsonData[0].name | json }} <br />
 </div> -->
 
 
-<p>La liste des pokemons:</p>
-<div *ngFor="let pokemon of pokemonsList">
-  <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
-  <p *ngIf="selectedPokemon === pokemon">
-    <label>Le nom : </label>
-    {{pokemon.name}}
-  </p>
+<div class="grid-container">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+
+  <section class="main">
+    <div class="cards" *ngFor="let pokemon of pokemonsList">
+      <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
+      <p *ngIf="selectedPokemon === pokemon">
+        <label>Le nom : </label>
+        {{pokemon.name}}
+      </p>
+    </div>
+    <!-- <div class="cards">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+    </div> -->
+  </section>
+
+  <footer>
+    <p>Droit d'auteur </p>
+  </footer>
+
 </div>
