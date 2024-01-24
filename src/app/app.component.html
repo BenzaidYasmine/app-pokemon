@@ -9,19 +9,36 @@
   </header>
 
   <section class="main">
-    <div class="cards" *ngFor="let pokemon of pokemonsList">
+
+    <div>
+      <h2>Chercher un Pokémon : </h2>
+      <input 
+            #input 
+            (keyup)="selectPokemonByName(input.value)" 
+            type="text" />
+      
+      <p>{{pokemonSelected?.types}}</p>
+    </div>
+
+
+    <div class="cards" *ngFor="let pokemon of pokemonsList.slice(0,4)">
       <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
       <p *ngIf="selectedPokemon === pokemon">
         <label>Le nom : </label>
         {{pokemon.name}}
       </p>
     </div>
+
+
     <!-- <div class="cards">
       <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
       <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
       <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
       <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
     </div> -->
+
+
+
   </section>
 
   <footer>

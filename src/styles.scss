@@ -11,7 +11,7 @@
 .grid-container {
     display: grid;
     min-height: 100vh;
-    background-color: rgb(155, 219, 219);
+    // background-color: rgb(155, 219, 219);
     grid:
         "header header  header" 200px "main main main" auto "footer footer footer" 200px / 1fr 1fr 1fr;
 
@@ -21,7 +21,7 @@
 header {
     grid-area: header;
     background-color: rgb(141, 141, 145);
-    color: white;
+    // color: white;
 }
 
 .main {

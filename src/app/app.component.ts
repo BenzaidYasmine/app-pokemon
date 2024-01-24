@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   jsonData: any;
   //Déclaration d'une liste de pokemons
   pokemonsList: Pokemon[] = POKEMONS;
+  pokemonSelected: Pokemon | undefined;
 
   constructor(private http: HttpClient, private dataService: DataService) {}
 
@@ -32,5 +33,20 @@ export class AppComponent implements OnInit {
   selectedPokemon: any;
   selectPokemon(pokemon: any) {
     this.selectedPokemon = pokemon;
+  }
+
+  selectPokemonByName(pokemonName: string) {
+    //Pour chaque élèment cad pokemon on regarde si son id est égal à l'id du pokemon séléctionné si c'est le cas on retourn un pokemon qui est de type pokemon sinon bein rien car il est undefined
+    const pokemon: Pokemon | undefined = this.pokemonsList.find(
+      (pokemon) => pokemon.name.toLowerCase() == pokemonName.toLowerCase()
+    );
+    console.log('le type saisie est : ', pokemonName);
+    if (Pokemon) {
+      this.pokemonSelected = pokemon;
+      console.log('le pokemon recherché est: ', pokemon);
+    } else {
+      this.pokemonSelected = undefined;
+      console.log('le pokemon recherché est introuvable  ', undefined);
+    }
   }
 }
