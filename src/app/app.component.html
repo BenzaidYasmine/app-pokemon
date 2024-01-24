@@ -14,7 +14,7 @@
       <h2>Chercher un Pokémon : </h2>
       <input 
             #input 
-            (keyup)="selectPokemonByName(input.value)" 
+            (keyup.enter)="selectPokemonByName(input.value)" 
             type="text" />
       
       <p>{{pokemonSelected?.types}}</p>
