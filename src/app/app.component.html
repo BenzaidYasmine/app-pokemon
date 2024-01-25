@@ -16,8 +16,7 @@
             #input 
             (keyup.enter)="selectPokemonByName(input.value)" 
             type="text" />
-      
-      <p>{{pokemonSelected?.types}}</p>
+      <p *ngIf="pokemonSelected">Vous avez saisie {{pokemonSelected?.name}}, il est de type : {{pokemonSelected?.types}} </p>
     </div>
 
 
