@@ -20,7 +20,7 @@
     </div>
 
 
-    <div class="cards" *ngFor="let pokemon of pokemonsList.slice(0,4)">
+    <div class="cards" *ngFor="let pokemon of pokemonsList.slice(0,10)">
       <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
       <p *ngIf="selectedPokemon === pokemon">
         <label>Le nom : </label>
