@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+// @import "@fortawesome/fontawesome-free/css/all.css";
 
 * {
     margin: 0;
@@ -7,11 +8,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #C38257;
+    --secondary: #C5847F;
+    --light: #EFE4AF;
+}
+
+body {
+    background: linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+}
+
 
 .grid-container {
     display: grid;
     min-height: 100vh;
-    // background-color: rgb(155, 219, 219);
     grid:
         "header header  header" 200px "main main main" auto "footer footer footer" 200px / 1fr 1fr 1fr;
 
@@ -19,32 +30,120 @@
 
 
 header {
+    display: flex;
+    justify-content: space-between;
     grid-area: header;
-    background-color: rgb(141, 141, 145);
-    // color: white;
+    // grid: "logo menu contact recherche" 200px/ 150px 1fr 1fr 1fr;
 }
+
+.logo {
+    display: flex;
+    // justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: 50px;
+
+    img {
+        width: 60px;
+        // margin-left: 80px;
+
+        overflow: hidden;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+}
+
+
+.menu {
+    // background-color: rgb(208, 208, 216);
+}
+
+.contact {
+    // background-color: rgb(189, 189, 170);
+}
+
+.recherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+
+    input {
+        width: 200px;
+        height: 50px;
+        border: 0;
+        padding: 1rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        outline: none;
+    }
+
+    button {
+        background-color: white;
+        height: 50px;
+        padding: 1rem;
+        border: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
 
 .main {
     grid-area: main;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 10px;
-    // justify-items: center;
-    // align-items: center;
-    background-color: rgb(183, 185, 176);
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+    margin: 50px;
+    padding: 50px;
+
 }
 
-.cards {
-    border: 1px solid rgb(85, 84, 84);
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
+.cards-container {
 
-    /* Espace entre les images */
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    // background-color: pink;
+    width: 450px;
+    border-radius: 25px;
+    box-shadow:
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .card-img {
+        // width: auto;
+        padding: 1rem;
+
+        img {
+            margin: 2px;
+            width: 200px;
+        }
+    }
+
+    .card-info {
+        margin-left: 50px;
+        color: white;
+
+        p {
+            margin-top: 40px;
+            font-size: 1.5rem;
+        }
+
+    }
+
+
 }
 
 footer {
@@ -52,6 +151,6 @@ footer {
     display: grid;
     justify-content: center;
     padding: 10px;
-    background-color: rgb(239, 239, 241);
+    background-color: var(--primary);
+    color: white;
 }
-

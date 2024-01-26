@@ -4,28 +4,44 @@
 
 
 <div class="grid-container">
+
   <header>
-    <h1>{{title}}</h1>
+    <div class="logo">
+      <img src="../assets/img/pokeball-icon-1.png" alt="">
+      <!-- <h1>{{title}}</h1> -->
+    </div>
+    <div class="menu"></div>
+    <div class="contact"></div>
+    <form class="recherche" action="#">
+      <input #input (keyup.enter)="selectPokemonByName(input.value)" type="text" />
+      <button class="search-icon">
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+      <br />
+      <div class="info-search">
+        <p *ngIf="pokemonSelected">Vous avez saisie {{pokemonSelected?.name}}, il est de type :
+          {{pokemonSelected?.types}}
+        </p>
+      </div>
+    </form>
+
   </header>
 
   <section class="main">
 
-    <div>
-      <h2>Chercher un Pokémon : </h2>
-      <input 
-            #input 
-            (keyup.enter)="selectPokemonByName(input.value)" 
-            type="text" />
-      <p *ngIf="pokemonSelected">Vous avez saisie {{pokemonSelected?.name}}, il est de type : {{pokemonSelected?.types}} </p>
-    </div>
+    <div class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,10)">
+      <div class="card-img">
+        <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
+      </div>
+      <div class="card-info">
+        <p *ngIf="selectedPokemon === pokemon">
+          <label>Le nom : </label>
+          {{pokemon.name}} <br />
+          <label>Espèce : </label>
+          {{pokemon.types}}
+        </p>
+      </div>
 
-
-    <div class="cards" *ngFor="let pokemon of pokemonsList.slice(0,10)">
-      <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
-      <p *ngIf="selectedPokemon === pokemon">
-        <label>Le nom : </label>
-        {{pokemon.name}}
-      </p>
     </div>
 
 
@@ -37,11 +53,10 @@
     </div> -->
 
 
-
   </section>
 
   <footer>
-    <p>Droit d'auteur </p>
+    <p>Droit d'auteur </p>1
   </footer>
 
 </div>

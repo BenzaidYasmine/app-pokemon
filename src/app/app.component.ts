@@ -3,9 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from './services/data.service';
 import { Pokemon } from './models/pokemon';
 import { POKEMONS } from './mocks/mock-pokemons-list';
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
+// import { faCoffee } from '@fortawesome/fontawesome-free';
+import { faCoffee, faSquare,faSearch} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  // imports: [FontAwesomeModule],
+  // standalone: true,
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
@@ -14,8 +23,16 @@ export class AppComponent implements OnInit {
   //Déclaration d'une liste de pokemons
   pokemonsList: Pokemon[] = POKEMONS;
   pokemonSelected: Pokemon | undefined;
+  faCoffee = faCoffee;
+  faSearch = faSearch;
 
-  constructor(private http: HttpClient, private dataService: DataService) {}
+  constructor(
+    private http: HttpClient,
+    private dataService: DataService,
+    library: FaIconLibrary
+  ) {
+    library.addIcons(faCoffee, faSquare);
+  }
 
   ngOnInit() {
     this.printData();
