@@ -12,26 +12,33 @@
     </div>
     <div class="menu"></div>
     <div class="contact"></div>
-    <form class="recherche" action="#">
+    <div class="recherche">
       <input #input (keyup.enter)="selectPokemonByName(input.value)" type="text" />
       <button class="search-icon">
         <fa-icon [icon]="faSearch"></fa-icon>
       </button>
-      <br />
-      <div class="info-search">
-        <p *ngIf="pokemonSelected">Vous avez saisie {{pokemonSelected?.name}}, il est de type :
-          {{pokemonSelected?.types}}
-        </p>
-      </div>
-    </form>
 
+    </div>
+    <!-- a revoir -->
+    <div *ngIf="pokemonSelected">
+      <p>Vous avez saisie {{pokemonSelected?.name}}, il est de type :
+        {{pokemonSelected?.types}}
+      </p>
+    </div>
   </header>
 
   <section class="main">
 
+
     <div class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,10)">
       <div class="card-img">
         <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
+      </div>
+
+      <div class="card-info">
+        <p>{{pokemon.name}}</p>
+        <p>{{pokemon.rarity}}</p>
+        <p>{{pokemon.number}}</p>
       </div>
       <div class="card-info">
         <p *ngIf="selectedPokemon === pokemon">

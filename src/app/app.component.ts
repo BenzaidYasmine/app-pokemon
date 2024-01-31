@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
     console.log('le type saisie est : ', pokemonName);
     if (Pokemon) {
       this.pokemonSelected = pokemon;
-      console.log('le pokemon recherché est: ', pokemon);
+      console.log('le pokemon recherché estttt: ', pokemon);
     } else {
       this.pokemonSelected = undefined;
       console.log('le pokemon recherché est introuvable  ', undefined);
