@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BorderCardDirective } from './border-card.directive';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BorderCardDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

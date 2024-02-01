@@ -10,7 +10,9 @@
       <img src="../assets/img/pokeball-icon-1.png" alt="">
       <!-- <h1>{{title}}</h1> -->
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+      <h1 class="">Pokémons</h1>
+    </div>
     <div class="contact"></div>
     <div class="recherche">
       <input #input (keyup.enter)="selectPokemonByName(input.value)" type="text" />
@@ -30,8 +32,8 @@
   <section class="main">
 
 
-    <div class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,10)">
-      <div class="card-img">
+    <div appBorderCard class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,10)" >
+      <div class="card-img"  >
         <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
       </div>
 
