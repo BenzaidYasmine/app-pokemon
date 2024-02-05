@@ -74,7 +74,7 @@ header {
 
         &:hover {
             font-size: 6rem;
-           
+
         }
     }
 
@@ -134,7 +134,7 @@ header {
     width: 450px;
     border-radius: 25px;
 
-    background-color: #DACD90;
+    background-color: #ece3ab;
     overflow: hidden;
     transition: transform 0.3s ease;
     display: flex;
@@ -162,14 +162,22 @@ header {
         font-weight: bolder;
         font-size: 1.5rem;
 
+       
+
         p:first-child {
             margin-top: 2.5rem;
-
         }
 
         p {
-            margin-bottom: 2rem;
+            margin-bottom: 20rem;
+        }
 
+ span {
+            padding: 10px 15px 10px 15px;
+            width: auto;
+            height: auto;
+            border-radius: 20px;
+            color: black;
         }
 
     }
@@ -185,3 +193,5 @@ footer {
     background-color: var(--primary);
     color: white;
 }
+
+// https://dribbble.com/shots/16868991-Pokemon-Trading-Card-NFT/attachments/11930813?mode=media

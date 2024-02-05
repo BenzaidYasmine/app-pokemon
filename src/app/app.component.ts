@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/angular-fontawesome';
 // import { faCoffee } from '@fortawesome/fontawesome-free';
 import { faCoffee, faSquare,faSearch} from '@fortawesome/free-solid-svg-icons';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 @Component({
   selector: 'app-root',
@@ -36,8 +37,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.printData();
-    console.log('la liste des pokemons: ', this.pokemonsList);
-    console.log('le pokemon 1: ', this.pokemonsList[0]);
   }
 
   printData() {
@@ -57,13 +56,10 @@ export class AppComponent implements OnInit {
     const pokemon: Pokemon | undefined = this.pokemonsList.find(
       (pokemon) => pokemon.name.toLowerCase() == pokemonName.toLowerCase()
     );
-    console.log('le type saisie est : ', pokemonName);
     if (Pokemon) {
       this.pokemonSelected = pokemon;
-      console.log('le pokemon recherché estttt: ', pokemon);
     } else {
       this.pokemonSelected = undefined;
-      console.log('le pokemon recherché est introuvable  ', undefined);
     }
   }
 }

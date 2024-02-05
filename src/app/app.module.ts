@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BorderCardDirective } from './border-card.directive';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 @NgModule({
-  declarations: [AppComponent, BorderCardDirective],
+  declarations: [AppComponent, BorderCardDirective, PokemonTypeColorPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
