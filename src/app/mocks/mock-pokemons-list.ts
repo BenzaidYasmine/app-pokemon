@@ -36,7 +36,7 @@ export const POKEMONS: Pokemon[] = [
       "name": "Charmander",
       "supertype": "Pokémon",
       "subtypes": ["Basic"],
-      "types": ["Fire","water"],
+      "types": ["Fire","Water"],
       "number": "7",
       "rarity": "Common",
       "images": {

@@ -157,28 +157,31 @@ header {
     }
 
     .card-info {
-        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
         color: rgb(3, 3, 3);
-        font-weight: bolder;
-        font-size: 1.5rem;
 
-       
+        font-size: 1.5rem;
 
         p:first-child {
             margin-top: 2.5rem;
+            font-weight: bolder;
         }
 
         p {
-            margin-bottom: 20rem;
+            margin-bottom: 2rem;
+            padding: 10px 20px;
         }
 
- span {
-            padding: 10px 15px 10px 15px;
-            width: auto;
-            height: auto;
-            border-radius: 20px;
+        span {
+            // width: auto;
+            // height: auto;
             color: black;
+            padding: 15px 20px;
+            border-radius: 25px;
         }
+
 
     }
 

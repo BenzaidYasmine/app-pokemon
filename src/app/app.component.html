@@ -30,27 +30,28 @@
   </header>
 
   <section class="main">
-    <div appBorderCard class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,10)">
-      <div class="card-img">
-        <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="{{ pokemon.name }}">
+
+
+    <div appBorderCard class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,4)" >
+      <div class="card-img"  >
+        <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="carte pokemon :{{ pokemon.name }}">
       </div>
 
       <div class="card-info">
         <p>{{pokemon.name}}</p>
-        <p>{{pokemon.types}}</p>
-        <p>{{pokemon.number}}</p>
+        
+        <span *ngFor="let type of pokemon.types" [style.background-color]="type | pokemonTypeColor">{{type}} <br> </span>
 
+       
       </div>
-
-      <div class="card-info">
+      <!-- <div class="card-info">
         <p *ngIf="selectedPokemon === pokemon">
           <label>Le nom : </label>
           {{pokemon.name}} <br />
           <label>Espèce : </label>
           {{pokemon.types}}
         </p>
-      </div>
-
+      </div> -->
     </div>
 
 

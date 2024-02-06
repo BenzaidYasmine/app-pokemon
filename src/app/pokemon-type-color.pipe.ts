@@ -5,49 +5,50 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PokemonTypeColorPipe implements PipeTransform {
   transform(types: string): string {
-    let color: string;
+    // let style: any = {'width': '200px', 'height': '100px', 'color':'white'};
+    let style: any = {};
     //on va recevoir le type du pokémon qui sera soit: feu, eau , ....
     switch (types) {
       case 'Fire':
-        color = 'red ';
+        style = 'red';
         break;
 
       case 'Water':
-        color = 'blue';
+        style = '#5EC3FD';
         break;
 
       case 'Grass':
-        color = 'green';
+        style = '#BBBE64';
         break;
 
       case 'Metal':
-        color = 'yellow';
+        style = 'F2E2BA';
         break;
 
       case 'Psychic':
-        color = 'purple';
+        style = 'purple';
         break;
 
       case 'Darkness':
-        color = 'black';
+        style += 'black';
         break;
 
       case 'Lightning':
-        color = 'yellow';
+        style += 'red';
         break;
 
       case 'Colorless':
-        color = 'cyan';
+        style += 'cyan';
         break;
 
       case 'Dragon':
-        color = 'orange';
+        style += 'orange';
         break;
 
       default:
-        color = 'yellow';
+        style += 'F76F8E';
     }
-    console.log("test : ",color)
-    return color;
+    console.log("test : ",style)
+    return style;
   }
 }
