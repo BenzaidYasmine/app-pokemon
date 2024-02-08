@@ -591,21 +591,7 @@ export const POKEMONS: Pokemon[] = [
  
       }
     },
-    {
-      "id": "swsh7-215",
-      "set": "swsh7",
-      "name": "Umbreon VMAX",
-      "supertype": "Pokémon",
-      "subtypes": ["VMAX", "Single Strike"],
-      "types": ["Darkness"],
-      "number": "215",
-      "rarity": "Rare Rainbow",
-      "images": {
-        "small": "https://images.pokemontcg.io/swsh7/215.png",
-        "large": "https://images.pokemontcg.io/swsh7/215_hires.png",
-     
-      }
-    },
+   
     {
       "id": "pgo-31",
       "set": "pgo",
@@ -874,49 +860,6 @@ export const POKEMONS: Pokemon[] = [
           "small": "https://images.pokemontcg.io/swshp/SWSH127.png",
           "large": "https://images.pokemontcg.io/swshp/SWSH127_hires.png"
       }
-      },
-      {
-        "id": "pgo-11",
-        "set": "pgo",
-        "name": "Radiant Charizard",
-        "supertype": "Pokémon",
-        "subtypes": ["Basic", "Radiant"],
-        "types": ["Fire"],
-        "number": "11",
-        "rarity": "Radiant Rare",
-        "images": {
-          "small": "https://images.pokemontcg.io/pgo/11.png",
-          "large": "https://images.pokemontcg.io/pgo/11_hires.png",
-        }
-      },
-      {
-        "id": "swsh12-59",
-        "set": "swsh12",
-        "name": "Radiant Alakazam",
-        "supertype": "Pokémon",
-        "subtypes": ["Basic", "Radiant"],
-        "types": ["Psychic"],
-        "number": "59",
-        "rarity": "Radiant Rare",
-        "images": {
-          "small": "https://images.pokemontcg.io/swsh12/59.png",
-          "large": "https://images.pokemontcg.io/swsh12/59_hires.png"
-      }
-    },
-      {
-        "id": "swsh12-120",
-        "set": "swsh12",
-        "name": "Radiant Jirachi",
-        "supertype": "Pokémon",
-        "subtypes": ["Basic", "Radiant"],
-        "types": ["Metal"],
-        "number": "120",
-        "rarity": "Radiant Rare",
-        "images": {
-          "small": "https://images.pokemontcg.io/swsh12/120.png",
-          "large": "https://images.pokemontcg.io/swsh12/120_hires.png",
-          
-        }
       },
       {
         "id": "swsh11tg-TG03",
@@ -1259,21 +1202,7 @@ export const POKEMONS: Pokemon[] = [
           "large": "https://images.pokemontcg.io/swsh7/215_hires.png"
         }
       },
-      {
-        "id": "pgo-31",
-        "set": "pgo",
-        "name": "Mewtwo VSTAR",
-        "supertype": "Pokémon",
-        "subtypes": ["VSTAR"],
-        "types": ["Psychic"],
-        "number": "31",
-        "rarity": "Rare Holo VSTAR",
-        "images": {
-          "small": "https://images.pokemontcg.io/pgo/31.png",
-          "large": "https://images.pokemontcg.io/pgo/31_hires.png",
-
-        }
-      },
+     
       {
         "id": "swshp-SWSH214",
         "set": "swshp",

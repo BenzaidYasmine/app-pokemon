@@ -7,9 +7,7 @@ import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-// import { faCoffee } from '@fortawesome/fontawesome-free';
 import { faCoffee, faSquare,faSearch} from '@fortawesome/free-solid-svg-icons';
-//import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 @Component({
   selector: 'app-root',

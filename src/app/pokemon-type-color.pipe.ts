@@ -10,43 +10,45 @@ export class PokemonTypeColorPipe implements PipeTransform {
     //on va recevoir le type du pokémon qui sera soit: feu, eau , ....
     switch (types) {
       case 'Fire':
-        style = 'red';
+        style = '#F2522E';
         break;
 
       case 'Water':
-        style = '#5EC3FD';
+        style = '#65C4EE';
         break;
 
       case 'Grass':
-        style = '#BBBE64';
+        style = '#9FC83B';
         break;
 
       case 'Metal':
-        style = 'F2E2BA';
+        style = '#838289';
         break;
 
       case 'Psychic':
-        style = 'purple';
+        style = '#8C3B87';
         break;
 
       case 'Darkness':
-        style += 'black';
+        style = '#8C7B74';
         break;
 
       case 'Lightning':
-        style += 'red';
+        style = '#FFE923';
         break;
 
       case 'Colorless':
-        style += 'cyan';
+        style = '#8FD9B6';
         break;
 
       case 'Dragon':
-        style += 'orange';
+        style = '#AA3A26';
         break;
-
+        case 'Fighting':
+          style = '#3E5677';
+          break; 
       default:
-        style += 'F76F8E';
+        style = '';
     }
     console.log("test : ",style)
     return style;
