@@ -1,1 +1,33 @@
-<p>list-pokemon works!</p>
+<section class="main">
+  
+    <div appBorderCard class="cards-container" *ngFor="let pokemon of pokemonsList.slice(0,5)">
+      <div class="card-img">
+        <img (click)="selectPokemon(pokemon)" [src]="pokemon.images.small" alt="carte pokemon :{{ pokemon.name }}">
+      </div>
+
+      <div class="card-info">
+        <p>{{pokemon.name}}</p>
+        <span *ngFor="let type of pokemon.types" [style.background-color]="type | pokemonTypeColor">
+          {{type}}
+        </span>
+      </div>
+      <!-- <div class="card-info">
+        <p *ngIf="selectedPokemon === pokemon">
+          <label>Le nom : </label>
+          {{pokemon.name}} <br />
+          <label>Espèce : </label>
+          {{pokemon.types}}
+        </p>
+      </div> -->
+    </div>
+
+
+    <!-- <div class="cards">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+      <img [src]="jsonData[0].images.small" alt="{{ jsonData[0].name }}">
+    </div> -->
+
+
+  </section>

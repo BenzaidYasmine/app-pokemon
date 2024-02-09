@@ -19,7 +19,6 @@ import { faCoffee, faSquare,faSearch} from '@fortawesome/free-solid-svg-icons';
 export class AppComponent implements OnInit {
   title = 'Pokemons APP';
   jsonData: any;
-  //Déclaration d'une liste de pokemons
   pokemonsList: Pokemon[] = POKEMONS;
   pokemonSelected: Pokemon | undefined;
   faCoffee = faCoffee;
@@ -44,11 +43,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  selectedPokemon: any;
-  selectPokemon(pokemon: any) {
-    this.selectedPokemon = pokemon;
-  }
-
+  
   selectPokemonByName(pokemonName: string) {
     //Pour chaque élèment cad pokemon on regarde si son id est égal à l'id du pokemon séléctionné si c'est le cas on retourn un pokemon qui est de type pokemon sinon bein rien car il est undefined
     const pokemon: Pokemon | undefined = this.pokemonsList.find(

@@ -16,10 +16,11 @@
 
 
  .grid-container {
-     display: grid;
      min-height: 100vh;
-     grid:
-         "header header  header" 200px "main main main" auto "footer footer footer" 200px / 1fr 1fr 1fr;
+     //   display: grid;
+
+     //   grid:
+     //       "header" 100px "main" auto "footer" 200px / 1fr;
      flex-wrap: wrap;
 
  }
@@ -28,9 +29,11 @@
  header {
      display: flex;
      justify-content: space-between;
+     flex-wrap: wrap;
      grid-area: header;
-     // grid: "logo menu contact recherche" 200px/ 150px 1fr 1fr 1fr;
+     //grid: "logo menu contact recherche" 200px/ 150px 1fr 1fr 1fr;
      background-color: #003C3C;
+     height: 100px;
  }
 
  .logo {
@@ -114,25 +117,17 @@
      grid-row-gap: 50px;
      grid-column-gap: 100px;
      margin: 50px;
-     padding: 50px;
-     @include desktop{
-        grid-template-columns: repeat(2, 1fr);
-     };
+     //  padding: 50px;
 
-     @include desktopmax{
-        grid-template-columns: repeat(3, 1fr);
+     @include desktop {
+         grid-template-columns: repeat(2, 1fr);
      }
 
-    
-     //  @include desktop {
-     //      //pour un ecran de 17 pouces = 1440px
-     //      grid-template-columns: repeat(2, 1fr);
-     //  }
+     ;
 
-     //  @include desktop-max {
-     //      grid-template-columns: repeat(3, 1fr);
-     //  }
-
+     @include desktopmax {
+         grid-template-columns: repeat(3, 1fr);
+     }
 
  }
 
@@ -197,11 +192,13 @@
 
  footer {
      grid-area: footer;
-     display: grid;
+     display: flex;
      justify-content: center;
-     padding: 10px;
+     align-items: center;
+     flex-wrap: wrap;
      background-color: var(--primary);
      color: white;
+     height: 100px;
  }
 
  // https://dribbble.com/shots/16868991-Pokemon-Trading-Card-NFT/attachments/11930813?mode=media

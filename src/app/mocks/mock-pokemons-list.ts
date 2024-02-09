@@ -3,7 +3,7 @@ import { Pokemon } from "../models/pokemon"
 
 export const POKEMONS: Pokemon[] = [
     {
-      "id": "swsh12pt5-160",
+      "id": "0",
       "set": "swsh12pt5",
       "name": "Pikachu",
       "supertype": "Pokémon",
@@ -17,7 +17,7 @@ export const POKEMONS: Pokemon[] = [
       }
     },
     {
-      "id": "sm10-33",
+      "id": "1",
       "set": "sm10",
       "name": "Squirtle",
       "supertype": "Pokémon",
@@ -31,7 +31,7 @@ export const POKEMONS: Pokemon[] = [
       }
     },
     {
-      "id": "sm115-7",
+      "id": "2",
       "set": "sm115",
       "name": "Charmander",
       "supertype": "Pokémon",
