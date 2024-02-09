@@ -1,19 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './services/data.service';
-import { Pokemon } from './models/pokemon';
-import { POKEMONS } from './mocks/mock-pokemons-list';
 import {
-  FontAwesomeModule,
-  FaIconLibrary,
+  FaIconLibrary
 } from '@fortawesome/angular-fontawesome';
-import { faCoffee, faSquare,faSearch} from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faSearch, faSquare } from '@fortawesome/free-solid-svg-icons';
+import { POKEMONS } from './mocks/mock-pokemons-list';
+import { Pokemon } from './models/pokemon';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  // imports: [FontAwesomeModule],
-  // standalone: true,
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
