@@ -11,9 +11,10 @@ import { ListPokemonComponent } from './components/list-pokemon/list-pokemon.com
 import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PoubelleComponent } from './components/poubelle/poubelle.component';
 
 @NgModule({
-  declarations: [AppComponent, BorderCardDirective, PokemonTypeColorPipe, ListPokemonComponent, DetailPokemonComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, BorderCardDirective, PokemonTypeColorPipe, ListPokemonComponent, DetailPokemonComponent, HeaderComponent, FooterComponent, PoubelleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

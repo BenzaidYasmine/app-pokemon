@@ -1,9 +1,8 @@
 @mixin desktop {
-
+// Pour un ecran de 17 pouces = 1440px
     @media only screen and (max-width:1440px) {
         @content;
     }
-
 }
 
 @mixin desktopmax {

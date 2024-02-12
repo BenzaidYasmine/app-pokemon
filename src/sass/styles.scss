@@ -201,4 +201,48 @@
      height: 100px;
  }
 
+
+ //  pokedex
+ .container-details {
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     justify-items: center;
+
+     .details-pokemon {
+         display: flex;
+         flex-direction: row;
+
+         justify-content: space-around;
+         align-items: center;
+         align-content: center;
+         justify-items: center;
+         box-shadow: #003C3C;
+         width: 700px;
+         height: 300px;
+         background-color: #ece3ab;
+         margin: 100px 100px;
+
+         .pokemon-img {
+
+             width: 50%;
+             height: 50%;
+         }
+
+        
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
  // https://dribbble.com/shots/16868991-Pokemon-Trading-Card-NFT/attachments/11930813?mode=media
